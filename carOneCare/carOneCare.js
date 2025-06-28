@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Delay and then check for the button
   setTimeout(() => {
     let buttonAttempts = 0;
-    const maxButtonAttempts = 40; // Try for about 4 seconds (40 * 100ms)
+    const maxButtonAttempts = 180; // Try for about X seconds (X * 100ms)
     const buttonInterval = setInterval(() => {
       const chatButton = document.querySelector('.minimized-button');
       if (chatButton) {
