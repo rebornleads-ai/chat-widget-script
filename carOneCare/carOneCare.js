@@ -20,12 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         note.style.left = '0';
         note.style.right = '0';
         chatWidget.appendChild(note);
-        console.log("Note added to chat widget");
-      } else {
-        console.log("Note already exists, skipping addition");
       }
-    } else {
-      console.log("Chat widget not found");
     }
   }
 
@@ -37,13 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
       const chatButton = document.querySelector('.minimized-button');
       if (chatButton) {
         chatButton.addEventListener('click', function() {
-          console.log("Chat button clicked, attempting to add note...");
           setTimeout(addNote, 500); // Delay to allow widget to render
         });
-        console.log("Chat button found and event listener added!!");
         clearInterval(buttonInterval); // Stop checking once button is found
       } else if (buttonAttempts >= maxButtonAttempts) {
-        console.log("Failed to find chat button after max attempts");
         clearInterval(buttonInterval); // Stop after max attempts
       }
       buttonAttempts++;
