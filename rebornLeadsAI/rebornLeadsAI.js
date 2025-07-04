@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
+    addNote();
     setTimeout(() => {
       let buttonAttempts = 0;
       const maxButtonAttempts = 180;
