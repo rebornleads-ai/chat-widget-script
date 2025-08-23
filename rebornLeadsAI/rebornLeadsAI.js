@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function addNote() {
-      //const chatWidget = document.querySelector('.ai-chat-widget');
+      const chatWidget = document.querySelector('.ai-chat-widget');
       console.log("addNote called!");
-      const chatWidget = document.querySelector('.professional-widget-container');
+      //const chatWidget = document.querySelector('.professional-widget-container');
       console.log("chatWidget: " + chatWidget);
       if (chatWidget) {
         const existingNote = chatWidget.querySelector('.custom-note');
