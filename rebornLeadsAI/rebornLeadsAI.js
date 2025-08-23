@@ -30,6 +30,28 @@ document.addEventListener('DOMContentLoaded', function() {
           note.style.left = '0';
           note.style.right = '0';
           chatWidget.appendChild(note);
+
+          const updateVisibility = () => {
+            const chatWidgetRect = chatWidget.getBoundingClientRect();
+            if (chatWidgetRect.width > chatWidgetRect.height) {
+              // If width is greater than height, make custom-note invisible
+              note.style.display = 'none';
+            } else {
+              // If width is smaller than or equal to height, make custom-note visible
+              note.style.display = 'block';
+            }
+          };
+          updateVisibility();
+
+          const resizeObserver = new ResizeObserver(entries => {
+            for (const entry of entries) {
+              if (entry.target === chatWidget) {
+                updateVisibility();
+              }
+            }
+          });
+          
+          resizeObserver.observe(chatWidget);
         }
       }
     }
