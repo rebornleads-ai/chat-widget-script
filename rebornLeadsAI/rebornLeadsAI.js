@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function addNote() {
-      const chatWidget = document.querySelector('.ai-chat-widget');
+      //const chatWidget = document.querySelector('.ai-chat-widget');
+      const chatWidget = document.querySelector('professional-widget-container');
       if (chatWidget) {
         const existingNote = chatWidget.querySelector('.custom-note');
         if (!existingNote) {
@@ -35,7 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
       let buttonAttempts = 0;
       const maxButtonAttempts = 180;
       const buttonInterval = setInterval(() => {
-        const chatButton = document.querySelector('.minimized-button');
+        //const chatButton = document.querySelector('.minimized-button');
+        const chatButton = document.querySelector('rounded-full');
         if (chatButton) {
           chatButton.addEventListener('click', function() {
             setTimeout(addNote, 500); // Delay to allow widget to render
