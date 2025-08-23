@@ -12,9 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function addNote() {
       //const chatWidget = document.querySelector('.ai-chat-widget');
+      console.log("addNote called!");
       const chatWidget = document.querySelector('.professional-widget-container');
+      console.log("chatWidget: " + chatWidget);
       if (chatWidget) {
         const existingNote = chatWidget.querySelector('.custom-note');
+        console.log("existingNote: " + existingNote);
         if (!existingNote) {
           const note = document.createElement('div');
           note.className = 'custom-note';
@@ -37,9 +40,12 @@ document.addEventListener('DOMContentLoaded', function() {
       const maxButtonAttempts = 180;
       const buttonInterval = setInterval(() => {
         //const chatButton = document.querySelector('.minimized-button');
+        console.log("button interval started ");
         const chatButton = document.querySelector('.rounded-full');
+        console.log("button interval chatButton: " + chatButton);
         if (chatButton) {
           chatButton.addEventListener('click', function() {
+            console.log("button interval chatButtonClicked!");
             setTimeout(addNote, 500); // Delay to allow widget to render
           });
           clearInterval(buttonInterval);
