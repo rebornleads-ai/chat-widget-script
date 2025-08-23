@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   var widgetScript = document.createElement('script');
-  widgetScript.src = 'https://buildmyagent.io/widget/6866e57148effe0cfb95793b/widget.js';
+  //widgetScript.src = 'https://buildmyagent.io/widget/6866e57148effe0cfb95793b/widget.js';
+  widgetScript.src = 'https://buildmyagent.io/widget/6866e57148effe0cfb95793b/widget-professional.js?widgetId=6866e57148effe0cfb95793b';
   widgetScript.async = false;
   document.head.appendChild(widgetScript);
 
