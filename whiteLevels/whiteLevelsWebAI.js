@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           const updateVisibility = () => {
             const chatWidgetRect = chatWidget.getBoundingClientRect();
-            if (chatWidgetRect.width > chatWidgetRect.height) {
+            if (chatWidgetRect.width >= chatWidgetRect.height) {
               // If width is greater than height, make custom-note invisible
               note.style.display = 'none';
             } else {
